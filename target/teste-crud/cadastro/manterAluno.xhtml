@@ -55,6 +55,14 @@
 					</h:outputText>
 				</p:column>	
 
+				<p:column headerText="Professor">
+					<h:outputText value="#{aluno.professor.nome}"></h:outputText>
+				</p:column>	
+
+				<p:column headerText="Curso">
+					<h:outputText value="#{aluno.curso.sigla}"></h:outputText>
+				</p:column>
+
 				<p:column headerText="Operações">					
 					
 					<p:commandButton id="cb1" icon="pi pi-pencil" title="Editar"	    				
@@ -120,6 +128,14 @@
 				<f:selectItems value="#{manterAlunoBean.professores}"
 					var="professor" itemLabel="#{professor.nome}"
 					itemValue="#{professor}"/>
+			</p:selectOneMenu>
+
+			<p:outputLabel for="Curso" value="Curso: " />
+			<p:selectOneMenu id="Curso" value="#{manterAlunoBean.aluno.curso}" >
+				<f:selectItem itemLabel="Selecione um curso"/>
+				<f:selectItems value="#{manterAlunoBean.cursos}"
+					var="curso" itemLabel="#{curso.sigla}"
+					itemValue="#{curso}"/>
 			</p:selectOneMenu>
 
 			<p:commandButton icon="pi pi-save" id="salvarButton"

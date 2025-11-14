@@ -31,5 +31,6 @@ public class Curso implements Serializable {
 	private Long id;	
 	private String sigla;
 	private Integer qdeSemestres;
+	private String nivel;
 	
 }
